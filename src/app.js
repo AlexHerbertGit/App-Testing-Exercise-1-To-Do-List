@@ -37,8 +37,7 @@ function renderTasks() {
         todoList.forEach(task => {
             const li = document.createElement('li')
             li.className = "todo-item"
-            li.innerHTML = `<span class="${task.done ? 'done' : ''}" onlick="toggleTask(${task.id})">${task.text}</span>
-                            <button onclick=deleteTask(${task.id})">Delete</button>`;
+            li.innerHTML = `<span class="${task.done ? 'done' : ''} onlick=toggleTask(${task.id})${task.text}"</span> <button onclick=deleteTask(${task.id})">Delete</button>`;
             todoListElement.appendChild(li);
         });
 }
